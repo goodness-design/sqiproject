@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.main{
+    position: fixed;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+
+}
+
+.intro-container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #000;
+}
+
+
+.intro-video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    animation: fadeVideo 2s ease forwards;
+    animation-delay: 7s;
+}
+
+/* Common text styles */
+.text1,
+.text2,
+.text3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    font-style: italic;
+    
+}
+
+/* Text 1 */
+.text1{
+    font-size: 4rem;
+    animation: text1Anim 4s ease forwards;
+    animation-delay: 9s;
+}
+
+.text2 p{
+    font-size: 56px;
+    font-weight: 500;
+}
+
+
+.text2{
+    font-size: 1.5rem;
+    line-height: 1.7;
+    animation: text2Anim 4s ease forwards;
+    animation-delay: 13s;
+}
+
+/* Text 3 */
+.text3{
+    font-size: 1.5rem;
+    line-height: 1.7;
+    animation: text3Anim 2s ease forwards;
+    animation-delay: 17s;
+}
+
+
+.text3 p{
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.text3 a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: black;
+    color: yellow;
+    text-decoration: none;
+    border: yellow 1px solid;
+}
+
+
+@keyframes fadeVideo{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    
+}
+
+
+@keyframes text1Anim{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+@keyframes text2Anim{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes text3Anim{
+    from{
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    to{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
